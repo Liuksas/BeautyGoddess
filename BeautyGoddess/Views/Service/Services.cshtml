@@ -1,0 +1,31 @@
+﻿@model BeautyGoddess.Models.Service.ServiceListModel
+@{
+    ViewBag.Title = "Paslaugos";
+}
+<h2>Paslaugos</h2>
+
+
+<div class="container">
+    @{
+        int i = 1;
+        int last = Model.ServiceList.Count;
+    }
+    @foreach (var service in Model.ServiceList)
+    {
+        if (i%3 == 1)
+        {@Html.Raw("<div class='row stylish-panel'>")
+        }
+        <div class="col-md-4">
+            <a href="@Url.Action("ServiceDetails", "Service", new {id = service.Id})" class="btn btn-primary" role="button">
+                <img src="@(service.ImgUrl)" class="img-circle img-thumbnail"/>
+                <h4>@(service.Title)</h4>
+            </a>
+
+        </div>
+        if (i%3 == 0 || i == last)
+        {
+            @Html.Raw("</div>")
+        }
+        i++;
+    }
+</div>

@@ -1,0 +1,53 @@
+﻿@using System.Web.Optimization
+@using BeautyGoddess.Utilities
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@System.Web.Configuration.WebConfigurationManager.AppSettings["siteName"] - @ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+</head>
+<body>
+ <div id="fb-root"></div>
+     <div class="navbar navbar-inverse navbar-fixed-top">
+         <div class="container">
+             <div class="navbar-header">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                 </button>
+                 <a href="@Url.Action("Index", "Index")" class="navbar-left"><img src="~/Content/Images/logo.png" style="height: 60px;"></a>
+             </div>
+             <div class="navbar-collapse collapse">
+                 <ul class="nav navbar-nav">
+                     <li class='@Html.IsActive("Services", "Service")'>@Html.ActionLink("Paslaugos", "Services", "Service")</li>
+                     <li class='@Html.IsActive("Prices", "Price")'>@Html.ActionLink("Kainos", "Prices", "Price")</li>
+                     <li class='@Html.IsActive("Contacts", "Contact")'>@Html.ActionLink("Kontaktai", "Contacts", "Contact")</li>
+                 </ul>
+             </div>
+         </div>
+     </div>
+
+<div class="container body-content">
+    @{ Html.RenderPartial("_Alerts"); }
+    @RenderBody()
+    <hr/>
+    <footer style="text-align: center;">
+        <p>
+            <span class="glyphicon glyphicon-map-marker"></span>&nbsp;@System.Web.Configuration.WebConfigurationManager.AppSettings["infoAddress"]&nbsp;
+            <span class="glyphicon glyphicon-phone"></span>&nbsp;@System.Web.Configuration.WebConfigurationManager.AppSettings["infoPhone"]&nbsp;
+            <span class="glyphicon glyphicon-envelope"></span>&nbsp;@System.Web.Configuration.WebConfigurationManager.AppSettings["infoEmail"]&nbsp;
+        </p>
+        <a href="@Url.Action("Index", "Index")"><p>&copy; @DateTime.Now.Year - @System.Web.Configuration.WebConfigurationManager.AppSettings["siteName"]</p></a>
+    </footer>
+</div>
+
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/general")
+@RenderSection("scripts", false)
+</body>
+</html>

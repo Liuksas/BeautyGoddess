@@ -1,0 +1,94 @@
+﻿@model BeautyGoddess.Models.EmailModel
+@{
+    ViewBag.Title = "Kontaktai";
+}
+<h2>Kontaktai</h2>
+
+@using (Html.BeginForm("Contacts", "Contact", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <div class="container">
+        <br />
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="fb-page" data-href="https://www.facebook.com/BeautyGoddess-264196547306761" data-width="500" data-small-header="false"
+                        data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/BeautyGoddess-264196547306761" class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/BeautyGoddess-264196547306761">@System.Web.Configuration.WebConfigurationManager.AppSettings["infoAddress"]</a>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+
+                <div class="row">
+                    <p>
+                        <span class="glyphicon glyphicon-map-marker"></span>&nbsp;@System.Web.Configuration.WebConfigurationManager.AppSettings["infoAddress"]
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-phone"></span>&nbsp;@System.Web.Configuration.WebConfigurationManager.AppSettings["infoPhone"]
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-envelope"></span>&nbsp;@System.Web.Configuration.WebConfigurationManager.AppSettings["infoEmail"]
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <hr />
+            <div class="col-sm-6">
+                <div class="row">
+                    <p class="smpText">Mus rasite:</p>
+                </div>
+                <div class="row">
+                    <iframe width="500" height="450" style="border: 0"
+                            src="https://www.google.com/maps/embed/v1/place?q=Gele%C5%BEinio%20vilko%20g.%2017%2C%20Kaunas%20&key=AIzaSyCHgmIh9fQXe2Q3vYfyohH2w6gJvvSGPBs" wfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <p class="smpText">Palikite žinutę, ir mes su Jumis susisieksime per 24 valandas.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 form-group">
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Vardas, pavardė" })
+                    </div>
+                    <div class="col-md-4 form-group">
+                        @Html.ValidationMessageFor(m => m.Name, null, new { @class = "validation" })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 form-group">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "El. paštas" })
+                    </div>
+                    <div class="col-md-4 form-group">
+                        @Html.ValidationMessageFor(m => m.Email, null, new { @class = "validation" })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 form-group">
+                        @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", placeholder = "Telefonas" })
+                    </div>
+                    <div class="col-md-4 form-group">
+                        @Html.ValidationMessageFor(m => m.Phone, null, new { @class = "validation" })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 form-group">
+                        @Html.TextAreaFor(m => m.Message, 6, 0, new { @class = "form-control", placeholder = "Žinutė" })
+                    </div>
+                    <div class="col-md-4 form-group">
+                        @Html.ValidationMessageFor(m => m.Message, null, new { @class = "validation" })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <button class="btn btn-primary pull-left" type="submit">Palikti žinutę</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
