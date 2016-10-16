@@ -3,14 +3,14 @@
 }
 
 body {
-    padding-top: 50px;
+    padding-top: 55px;
     background-color: #fff2e6;
 }
 
 footer {
     color: white;
     text-align:center;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 
 .smpText{
@@ -23,7 +23,7 @@ footer {
 }
 
 .validation{
-    color: red;
+    color: #CB4A64;
 }
 
 a:link, a:visited
@@ -77,22 +77,48 @@ input, select, textarea {
 }
 
 /* navbar styles*/
+.navbar {
+    min-height: 40px;
+}
+
 .navbar-nav > li > a{
     line-height: 30px;
 }
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus,
-.navbar-inverse .navbar-nav > li > a:hover {
-    letter-spacing: 2px;
-    font-weight:bold;
-    color:#ffa34d;
-}
 
 .navbar-inverse .navbar-nav > li > a {
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-weight:bold;
-    color:#ffca99;
+    color: white;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #ffb773;
+    color: white;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    letter-spacing: 1px;
+    font-weight:bold;
+    background-color: #ffa34d;
+}
+
+.nav-tabs > li > a {
+    color: black;
+    font-weight: bold;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    background-color: #ffb773;
+    color: white;
+}
+
+.nav-tabs > li > a:hover {
+    background-color: #ffa34d;
+    color: white;
 }
 
 hr {
@@ -105,7 +131,9 @@ hr {
     letter-spacing: 1px;
 }
  
-.btn:focus, .btn:active:focus, .btn.active:focus {
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
     outline: 0 none;
 }
  
@@ -114,11 +142,16 @@ hr {
     color: #ffffff;
 }
  
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
     background: #ffa34d;
 }
  
-.btn-primary:active, .btn-primary.active {
+.btn-primary:active,
+.btn-primary.active {
     background: #ffa34d;
     box-shadow: none;
 }
@@ -126,10 +159,12 @@ hr {
 .panel-default > .panel-heading {
     background-color: #ffca99;
 }
+
 a.accordion-toggle {
     color: white;
     letter-spacing: 1px;
 }
+
 .panel-heading .accordion-toggle:after {
     font-family: 'Glyphicons Halflings';
     content: "\e114";

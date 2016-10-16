@@ -36,16 +36,14 @@
 <div class="container body-content">
     @{ Html.RenderPartial("_Alerts"); }
     @RenderBody()
-    <hr/>
 </div>
 <footer class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="container">
-        <p>
+        <p>&copy; @DateTime.Now.Year - @System.Web.Configuration.WebConfigurationManager.AppSettings["siteName"]&nbsp;&nbsp;
             <span class="glyphicon glyphicon-map-marker"></span>&nbsp;@System.Web.Configuration.WebConfigurationManager.AppSettings["infoAddress"]&nbsp;
             <span class="glyphicon glyphicon-phone"></span>&nbsp;@System.Web.Configuration.WebConfigurationManager.AppSettings["infoPhone"]&nbsp;
             <span class="glyphicon glyphicon-envelope"></span>&nbsp;@System.Web.Configuration.WebConfigurationManager.AppSettings["infoEmail"]&nbsp;
         </p>
-        <p class="smpText">&copy; Visos teisės saugomos. @DateTime.Now.Year - @System.Web.Configuration.WebConfigurationManager.AppSettings["siteName"]</p>
     </div>
 </footer>
 
