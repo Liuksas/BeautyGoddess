@@ -12,18 +12,20 @@
             <p>
                 <span class="glyphicon glyphicon-map-marker"></span>&nbsp;@System.Web.Configuration.WebConfigurationManager.AppSettings["infoAddress"]&nbsp;
                 <span class="glyphicon glyphicon-phone"></span>&nbsp;@System.Web.Configuration.WebConfigurationManager.AppSettings["infoPhone"]&nbsp;
-                <span class="glyphicon glyphicon-envelope"></span>&nbsp;@System.Web.Configuration.WebConfigurationManager.AppSettings["infoEmail"]&nbsp;
+                <span class="glyphicon glyphicon-envelope"></span>&nbsp;
+                <a style="color: black" href='mailto:@System.Web.Configuration.WebConfigurationManager.AppSettings["infoEmail"]'>
+                    @System.Web.Configuration.WebConfigurationManager.AppSettings["infoEmail"]</a>&nbsp;
             </p>
         </div>
     </div>
     <br/>
     <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#menu1">Parašykite mums</a></li>
-            <li><a data-toggle="tab" href="#menu2">Žemėlapis</a></li>
-            <li><a data-toggle="tab" href="#menu3">Facebook</a></li>
+            <li class="active"><a data-toggle="tab" href="#tab1">Parašykite mums</a></li>
+            <li><a data-toggle="tab" href="#tab2">Žemėlapis</a></li>
+            <li><a data-toggle="tab" href="#tab3">Facebook</a></li>
         </ul>
     <div class="tab-content">
-        <div id="menu1" class="tab-pane fade in active">
+        <div id="tab1" class="tab-pane fade in active">
             <h3>Parašykite mums</h3>
             <div class="col-md-6">
                 <div class="row">
@@ -69,7 +71,7 @@
                 </div>
             </div>
         </div>
-        <div id="menu2" class="tab-pane fade">
+        <div id="tab2" class="tab-pane fade">
             <h3>Žemėlapis</h3>
             <div class="col-md-6">
                 <div class="row">
@@ -82,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div id="menu3" class="tab-pane fade">
+        <div id="tab3" class="tab-pane fade">
             <h3>Facebook</h3>
             <div class="col-md-6">
                 <div class="row">
