@@ -37,16 +37,19 @@
     @{ Html.RenderPartial("_Alerts"); }
     @RenderBody()
 </div>
+<br /><br /><br />
 <footer class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="container">
         <p>&copy; @DateTime.Now.Year - @System.Web.Configuration.WebConfigurationManager.AppSettings["siteName"]&nbsp;&nbsp;
             <span class="glyphicon glyphicon-map-marker"></span>&nbsp;@System.Web.Configuration.WebConfigurationManager.AppSettings["infoAddress"]&nbsp;
             <span class="glyphicon glyphicon-phone"></span>&nbsp;@System.Web.Configuration.WebConfigurationManager.AppSettings["infoPhone"]&nbsp;
-            <span class="glyphicon glyphicon-envelope"></span>&nbsp;@System.Web.Configuration.WebConfigurationManager.AppSettings["infoEmail"]&nbsp;
+            <span class="glyphicon glyphicon-envelope"></span>&nbsp;
+            <a style="color: white" href='mailto:@System.Web.Configuration.WebConfigurationManager.AppSettings["infoEmail"]'>
+                @System.Web.Configuration.WebConfigurationManager.AppSettings["infoEmail"]
+            </a>&nbsp;
         </p>
     </div>
 </footer>
-
 @Scripts.Render("~/bundles/bootstrap")
 @Scripts.Render("~/bundles/general")
 @RenderSection("scripts", false)
