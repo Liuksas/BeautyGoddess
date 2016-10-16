@@ -1,10 +1,74 @@
-﻿@model BeautyGoddess.Models.Price.PriceListModel
+﻿@model BeautyGoddess.Models.Price.PriceGroupListModel
 @{
     ViewBag.Title = "Kainos";
 }
 <h2>Kainos</h2>
-
-<div class="container">
+<div class="panel-group" id="accordion">
+@foreach (var priceGroup in Model.PriceGroupList)
+{
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="@string.Format("accordion-toggle {0}", priceGroup.Id == 1 ? "" : "collapsed")" data-toggle="collapse"
+                    data-parent="#accordion" href='@string.Format("#collapse{0}", priceGroup.Id)'>
+                    <i class="glyphicon glyphicon-th-list"></i>&nbsp;@priceGroup.Title
+                </a>
+            </h4>
+        </div>
+        <div id='@string.Format("collapse{0}", priceGroup.Id)' class="@string.Format("panel-collapse collapse {0}", priceGroup.Id == 1 ? "in" : "")">
+            <div class="panel-body">
+               @if (priceGroup.Prices != null && priceGroup.Prices.Any())
+               {
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="col-md-10">Paslauga</th>
+                                <th class="col-md-2">Kaina</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           @foreach (var price in priceGroup.Prices)
+                           {
+                               <tr>
+                                   <td>
+                                       <span style="padding-left: 20px;">
+                                           @if (priceGroup.HasUrl)
+                                           {
+                                               <a href="@Url.Action("ServiceDetails", "Service", new {id = price.ServiceId})">
+                                                   <b>@price.Title</b>
+                                               </a>
+                                           }
+                                           else
+                                           {
+                                                <b>@price.Title</b>
+                                           }
+                                           @if (price.Description.Length > 0)
+                                           {
+                                               <br /><span style="padding-left: 20px; font-size: 12px; font-style: italic;">@price.Description</span>
+                                           }
+                                       </span>
+                                   </td>
+                                   <td style="vertical-align: middle;">
+                                       @if (price.PriceWithDiscount != "")
+                                       {
+                                           <span style="text-decoration: line-through;">&nbsp;@price.Price&nbsp;</span><span class="discount">@price.PriceWithDiscount</span>
+                                       }
+                                       else
+                                       {
+                                           <span>@price.Price</span>
+                                       }
+                                   </td>
+                               </tr>
+                           }
+                        </tbody>
+                    </table>
+               }
+            </div>
+        </div>
+    </div>
+}
+</div> 
+@*<div class="container">
     <table class="table table-striped">
         <thead>
         <tr>
@@ -58,4 +122,4 @@
         }
         </tbody>
     </table>
-</div>
+</div>*@

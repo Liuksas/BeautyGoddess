@@ -21,6 +21,7 @@
                      <span class="icon-bar"></span>
                  </button>
                  <a href="@Url.Action("Index", "Index")" class="navbar-left"><img src="~/Content/Images/logo.png" style="height: 60px;"></a>
+                 &nbsp;&nbsp;
              </div>
              <div class="navbar-collapse collapse">
                  <ul class="nav navbar-nav">
@@ -36,15 +37,17 @@
     @{ Html.RenderPartial("_Alerts"); }
     @RenderBody()
     <hr/>
-    <footer style="text-align: center;">
+</div>
+<footer class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container">
         <p>
             <span class="glyphicon glyphicon-map-marker"></span>&nbsp;@System.Web.Configuration.WebConfigurationManager.AppSettings["infoAddress"]&nbsp;
             <span class="glyphicon glyphicon-phone"></span>&nbsp;@System.Web.Configuration.WebConfigurationManager.AppSettings["infoPhone"]&nbsp;
             <span class="glyphicon glyphicon-envelope"></span>&nbsp;@System.Web.Configuration.WebConfigurationManager.AppSettings["infoEmail"]&nbsp;
         </p>
-        <a href="@Url.Action("Index", "Index")"><p>&copy; @DateTime.Now.Year - @System.Web.Configuration.WebConfigurationManager.AppSettings["siteName"]</p></a>
-    </footer>
-</div>
+        <p class="smpText">&copy; Visos teisės saugomos. @DateTime.Now.Year - @System.Web.Configuration.WebConfigurationManager.AppSettings["siteName"]</p>
+    </div>
+</footer>
 
 @Scripts.Render("~/bundles/bootstrap")
 @Scripts.Render("~/bundles/general")

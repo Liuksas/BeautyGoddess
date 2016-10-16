@@ -3,12 +3,13 @@
     ViewBag.Title = Model.Title;
 }
 <h2>@Model.Title</h2>
-<script type="text/javascript">
-    $(document).ready(function() { $("#st_@Model.Id").fadeIn("slow"); });
 
+<script type="text/javascript">
+    $(document).ready(function () { $("#st_@Model.Id").fadeIn("slow"); });
 </script>
+
 <div class="container">
-<br/>
+    <br />
     <div id="st_1" style="text-align: justify; display: none;">
         <h4>
             <b>Veido kaukės ir jų nauda odai</b>
@@ -249,7 +250,7 @@
         </p>
         <p>
             <b>Procetūra naudojama:</b>
-            <br/>
+            <br />
             Kas sieja raukšles, randus, strijas ir nelygią odą. Derma Roller naudojimas stimuliuoja kolageno gamybą odoje, tai leidžia pasiekti
             stulbinančių rezultatų naikinant raukšles ir randus, strijas, pigmentines dėmes.
         </p>
@@ -462,7 +463,7 @@
             Dėl priauginimo pati blakstiena nesusilpnėja, tiesiog dirbtinės blakstienos svoris lemia, kad natūralioji iškrenta keliom dienom anksčiau nei kristų natūraliai.
             Po kelių mėnesių matyti, kad didesnę apimties dalį sudaro mažos, dar pilnai neužaugusios blakstienos (jos auga iškritusių vietoje).
             Kadangi ant tokių blakstienų priauginti negalime, jos paliekamos laisvai augti ir priauginamos kitos, didesnės blakstienos.
-            Kito papildymo metu bus galima pridėti daugiau blakstienų, nes mažosios jau bus suaugusios. 
+            Kito papildymo metu bus galima pridėti daugiau blakstienų, nes mažosios jau bus suaugusios.
             Blakstienoms pilnai ataugti reikia 7-8 savaičių. Netgi nedarant pertraukos ir nenuimant priaugintų blakstienų, natūraliosios atauga.
         </p>
         <p>
@@ -503,7 +504,7 @@
     </div>
     <div id="st_11" style="text-align: justify; display: none;">
         <p>
-            <img style="padding-right:10px; padding-bottom:10px;" align="left" height="120" src="~/Content/Images/Services/antakiu_dazymas.jpg"/>
+            <img style="padding-right:10px; padding-bottom:10px;" align="left" height="120" src="~/Content/Images/Services/antakiu_dazymas.jpg" />
             <b>Antakių dažymas ir koregavimas</b> yra svarbus žingsnis siekiant, kad jūsų žvilgsnis taptų nepamirštamas. Paryškinti ir tvarkingi antakiai veidui
             suteikia rafinuotumo, tvarkingumo ir vizualiai išryškina akis. Visos akių srities išvaizda labai priklauso nuo antakių išlenkimo, ilgio, storio, spalvos.
             Nėra universalios antakių formos, kuri tiktų visoms moterims, todėl rūpestingai parinksime antakių formą, kuri tiks būtent Jums. Cheminis antakių dažymas
@@ -555,12 +556,21 @@
             Po visos procedūros ant depiliuotų vietų yra užtepamas specialus kremas su raminamu, dezinfekuojančiu efektu.
         </p>
         <p>
-            <i><b>Dažniausiai ši procedūra atliekama kas 3-6 savaites. Kuo daugiau procedūra kartojama, tuo skausmo pojūtis mažėja,
-            tad nemaloniausias ir skaudžiausias pojūtis būna pirmos procedūros metu.</b></i>
+            <i>
+                <b>
+                    Dažniausiai ši procedūra atliekama kas 3-6 savaites. Kuo daugiau procedūra kartojama, tuo skausmo pojūtis mažėja,
+                    tad nemaloniausias ir skaudžiausias pojūtis būna pirmos procedūros metu.
+                </b>
+            </i>
         </p>
     </div>
-<br/>
-<p>
-    <a href="@Url.Action("Services", "Service")" class="btn btn-primary pull-left" role="button">Atgal į paslaugas</a>
+    <br />
+    <p>
+        <div>
+            <a href="@Url.Action("Services", "Service")" class="btn btn-primary pull-left" role="button">Atgal į paslaugas</a>
+        </div>
+        <div style="padding-left: 160px;">
+            <a href="@Url.Action("Prices", "Price")" class="btn btn-primary pull-left" role="button">Atgal į kainas</a>
+        </div>
 </p>
 </div>

@@ -2,8 +2,8 @@
 
 namespace BeautyGoddess.Models.Price
 {
-    public class PriceListModel
+    public class PriceGroupListModel
     {
-        public List<PriceModel> PriceList { get; set; }
+        public List<PriceGroupModel> PriceGroupList { get; set; }
     }
 }

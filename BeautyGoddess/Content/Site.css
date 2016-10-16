@@ -4,8 +4,13 @@
 
 body {
     padding-top: 50px;
-    padding-bottom: 20px;
     background-color: #fff2e6;
+}
+
+footer {
+    color: white;
+    text-align:center;
+    padding-top: 15px;
 }
 
 .smpText{
@@ -21,16 +26,16 @@ body {
     color: red;
 }
 
-a:link, 
-a:visited
- {
-    color: #ffca99;
-}
-a:hover,
-a:active{
-    color: #ffa34d;
+a:link, a:visited
+{
+    outline: none;
+    color: #ffb773;
 }
 
+a:hover, a:active{
+    outline: none;
+    color: #ffa34d;
+}
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -39,9 +44,7 @@ a:active{
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
+input, select, textarea {
     max-width: 280px;
 }
 
@@ -49,7 +52,8 @@ textarea {
     padding: 20px 0;
     text-align: center;
 }
-.stylish-panel > div > a{
+
+.stylish-panel > div > a {
     padding: 10px;
     background: #fff2e6;
     color: black;
@@ -57,11 +61,13 @@ textarea {
     border-radius: 4px;
     transition: 0.2s;
 }
-.stylish-panel > div:hover > a{
+
+.stylish-panel > div:hover > a {
     margin-top: -10px;
     color: white;
     border: 1px solid rgb(200, 200, 200);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+    box-shadow: #000000 0 5px 5px 2px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 5px 2px;
     background: #ffca99;
     transition: 0.5s;
 }
@@ -89,9 +95,8 @@ textarea {
     color:#ffca99;
 }
 
-
-hr{
-    border-color:#ffca99;
+hr {
+    border-color:#ffb773;
     opacity: 0.5;
 }
 
@@ -104,9 +109,8 @@ hr{
     outline: 0 none;
 }
  
-.btn-primary,
-a.btn-primary {
-    background: #ffca99;
+.btn-primary, a.btn-primary {
+    background: #ffb773;
     color: #ffffff;
 }
  
@@ -117,4 +121,21 @@ a.btn-primary {
 .btn-primary:active, .btn-primary.active {
     background: #ffa34d;
     box-shadow: none;
+}
+
+.panel-default > .panel-heading {
+    background-color: #ffca99;
+}
+a.accordion-toggle {
+    color: white;
+    letter-spacing: 1px;
+}
+.panel-heading .accordion-toggle:after {
+    font-family: 'Glyphicons Halflings';
+    content: "\e114";
+    float: right;
+    color: white;
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    content: "\e080";
 }
