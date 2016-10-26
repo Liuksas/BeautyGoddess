@@ -30,13 +30,13 @@ namespace BeautyGoddess.Utilities
         {
             var priceList = new List<PriceModel>
             {
-                new PriceModel {Id = 1, ServiceId = 1, Title = "Mechaninis veido valymas", Description="Demakiažas, pilingas, veido brinkinimas, mechaninis išvalymas, raminanti kaukė + poras sutraukianti kaukė, tonizavimas, kremas", Price = " 35 €", PriceWithDiscount = "30 €"},
+                new PriceModel {Id = 1, ServiceId = 1, Title = "Mechaninis veido valymas", Description="Demakiažas, pilingas, veido brinkinimas, mechaninis išvalymas, raminanti kaukė + poras sutraukianti kaukė, masažas, tonizavimas, kremas", Price = " 35 €", PriceWithDiscount = "30 €"},
                 new PriceModel {Id = 2, ServiceId = 1, Title = "Cheminis pilingas", Description="", Price = "nuo 30 €", PriceWithDiscount = ""},
                 new PriceModel {Id = 3, ServiceId = 1, Title = "Veido procedūra pagal odos poreikius (giliai drėkinanti / valomoji / maitinanti / raminanti)", Description="", Price = "20 €", PriceWithDiscount = ""},
                 new PriceModel {Id = 4, ServiceId = 1, Title = "Veido odos procedūra pagal odos poreikius  + Žake-leri masažas", Description="", Price = "35 €", PriceWithDiscount = ""},
                 new PriceModel {Id = 5, ServiceId = 1, Title = "Veido odos prozedūra pagal odos poreikius + Plastinis veido masažas", Description="", Price = "45 €", PriceWithDiscount = ""},
                 new PriceModel {Id = 6, ServiceId = 1, Title = "Plastinis veido masažas su prabangiu drėkinančiu, atpalaiduojančiu veido serumu", Description="", Price = "28 €", PriceWithDiscount = ""},
-                new PriceModel {Id = 7, ServiceId = 1, Title = "Vitamino C terapija", Description="Demakiažas, pilingas, vitamino C koncentratas, kaukė, tonizavimas, kremas", Price = "35 €", PriceWithDiscount = ""},
+                new PriceModel {Id = 7, ServiceId = 1, Title = "Vitamino C terapija", Description="Demakiažas, pilingas, vitamino C koncentratas, masažas, kaukė, tonizavimas, kremas", Price = "35 €", PriceWithDiscount = ""},
                 new PriceModel {Id = 20, ServiceId = 2, Title = "Mezoterapija veidui /  kaklui ir dekolte", Description="", Price = "50-80€", PriceWithDiscount = ""},
                 new PriceModel {Id = 21, ServiceId = 2, Title = "Paakių srities mezoterapija", Description="", Price = "35-45 €", PriceWithDiscount = ""},
                 new PriceModel {Id = 22, ServiceId = 2, Title = "Lipolitinė mezoterapija dvigubo pagurklio / šlaunų / pilvo", Description="", Price = "40-60 €", PriceWithDiscount = ""},
